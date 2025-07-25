@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+groq
+scipy
+pinecone
+torch==2.0.1 
+sentence-transformers==2.2.2
