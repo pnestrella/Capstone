@@ -1,6 +1,6 @@
 --index-url https://download.pytorch.org/whl/cpu
 torch
-sentence-transformers==2.2.2
+sentence-transformers
 fastapi
 uvicorn
 pydantic
