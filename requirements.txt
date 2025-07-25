@@ -1,5 +1,5 @@
 --index-url https://download.pytorch.org/whl/cpu
-torch==2.0.1 
+torch==2.0.1+cpu  # Add +cpu suffix for older versions
 sentence-transformers==2.2.2
 fastapi
 uvicorn
