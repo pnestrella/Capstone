@@ -19,6 +19,14 @@ class RecommendationRequest(BaseModel):
 async def root():
     return ({"message": "fast api is running :)"})
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000))  # Render provides $PORT
+    )
+
 #To get the recommendation request from models
 @app.post('/api/getReco')
 async def getRecommendation(req: RecommendationRequest):
