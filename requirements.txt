@@ -1,10 +1,8 @@
---extra-index-url https://pypi.org/simple
-sentence-transformers==2.2.2
-torch
+sentence-transformers
 fastapi
 uvicorn
 pydantic
 python-dotenv
 groq
-scipy==1.10.1
+scipy
 pinecone
