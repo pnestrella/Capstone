@@ -51,11 +51,11 @@ async def getRecommendation(req: RecommendationRequest):
         generalSearch = await pineconeSearch(generalSearchInputs)
             #(Phase 2) - Semantic Reranking
         rerankingPhase = await reranking(generalSearch, rerankingInputs)
-        #Part (2)
-            #(Phase 3) - Feedback from LLM/ Generation
+        # #Part (2)
+        #     #(Phase 3) - Feedback from LLM/ Generation
         generationPhase = await generation(generationInputs,rerankingPhase)
  
-        return(generationPhase)
+        return generationPhase
 
         
     except Exception as err:

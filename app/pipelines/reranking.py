@@ -1,8 +1,11 @@
 from scipy.spatial.distance import cosine
 from typing import Dict, List
-from sentence_transformers import SentenceTransformer
+from light_embed import TextEmbedding
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Mode used for the text Embeddings
+model = TextEmbedding('sentence-transformers/all-MiniLM-L6-v2')
+
 
 async def reranking(generalSearch : List, userProfile : Dict) -> List:
     #Jobseeker weights

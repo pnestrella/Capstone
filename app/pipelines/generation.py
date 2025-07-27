@@ -47,7 +47,6 @@ async def generation(generationInputs : Dict, rerankingPhase : List) -> Dict:
 
                     Final Output:
                     - Return a JSON array of all jobs.
-                    - Sort the array in **descending order by `score`**.
                     - Do not return any explanation or comments outside the JSON.
             """
         },

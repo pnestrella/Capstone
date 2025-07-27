@@ -1,11 +1,11 @@
-from sentence_transformers import SentenceTransformer
+from light_embed import TextEmbedding
 from typing import Dict, List
 from pinecone import Pinecone
 #setting up dotenv
 import os
 
 #Model for VECTORIZING
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = TextEmbedding('sentence-transformers/all-MiniLM-L6-v2')
 
 #This is for pinecone / GENERAL Searching
 async def pineconeSearch(userQuery : Dict) -> List:
@@ -32,6 +32,7 @@ async def pineconeSearch(userQuery : Dict) -> List:
     )
     generalSearchResult = generalSearchResult['matches']
 
-    #Threshold for the GENERAL Searching filter; for those with xx%//maintaining accurate results
+    # #Threshold for the GENERAL Searching filter; for those with xx%//maintaining accurate results
     filteredList = [i for i in generalSearchResult if i.get('score',0) > 0.30]
+
     return filteredList

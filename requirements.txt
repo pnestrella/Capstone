@@ -1,4 +1,4 @@
-sentence-transformers
+light-embed
 fastapi
 uvicorn
 pydantic
